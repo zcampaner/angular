@@ -46,9 +46,9 @@
 		</div>
 
       <p><h2>AngularJS Sample Application</h2></p>
-      <div ng-app = "mainApp" ng-controller = "studentController">
+      <div ng-app ="mainApp" ng-controller = "studentController">
          
-         <form name ="studentForm" novalidate>
+         <form ng-submit="submit()" name ="studentForm" novalidate>
             <table border = "0">
                <tr>
                   <td>Enter first name:</td>
@@ -85,11 +85,11 @@
                      <button ng-disabled = "studentForm.firstname.$dirty &&
                         studentForm.firstname.$invalid || studentForm.lastname.$dirty &&
                         studentForm.lastname.$invalid || studentForm.email.$dirty &&
-                        studentForm.email.$invalid" ng-click="submit()">Submit</button>
+                        studentForm.email.$invalid" ng-click="submit()" id="submit" value="Submit">Submit</button>
                   </td>
                </tr>
 					
-            </table>
+            </table><pre>{{firstName}} {{lastName}} {{email}}</pre>
          </form>
       </div>
       
@@ -106,6 +106,18 @@
             $scope.reset();
          });
       </script>
+      <script>
+	  angular.module('mainApp', [])
+	    .controller('studentController', ['$scope', function($scope) {
+	      $scope.submit = function() {
+	        if ($scope.text) {
+	          $scope.firstName = "";
+	          $scope.list.push(this.text);
+	          $scope.text = '';
+	        }
+	      };
+	    }]);
+</script>
       
    </body>
 </html>
