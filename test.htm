@@ -1,32 +1,54 @@
-<html ng-app="myApp">
-    <head>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/taskman.css"/>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700" rel="stylesheet" type="text/css">
+<html>
+   <head>
+      <title>Angular JS Forms</title>
+      <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    	<link rel="stylesheet" type="text/css" href="css/taskman.css"/>
+      
+      <style>
+         table, th , td {
+            border: 1px solid grey;
+            border-collapse: collapse;
+            padding: 5px;
+            margin-left: auto;
+    		margin-right: auto;
 
-    </head>
-    <body>
-    
-    <div class="navbar navbar-default" id="navbar">
-    <div class="container" id="navbar-ontainer">
-	<div class="navbar-header">
-		<a href="#" class="navbar-brand">
-			<small>
-				<i class="glyphicon glyphicon glyphicon-log-out"></i>
-				Try Angular by DWH CMS Team
-			</small>
-		</a><!-- /.brand -->
-		
-	</div><!-- /.navbar-header -->
-	<div class="navbar-header pull-right" role="navigation">
-	</div>
-	</div>
-	</div>
+         }
+         
+         table tr:nth-child(odd) {
+            background-color: #f2f2f2;
+         }
+         
+         table tr:nth-child(even) {
+            background-color: #ffffff;
+         }
+         h2{
+    		text-align: center;
+         }
+      </style>
+      
+   </head>
+   <body>
+	    <div class="navbar navbar-default" id="navbar">
+	    <div class="container" id="navbar-ontainer">
+		<div class="navbar-header">
+			<a href="#" class="navbar-brand">
+				<small>
+					<i class="glyphicon glyphicon glyphicon-log-out"></i>
+					Try Angular by DWH CMS Team
+				</small>
+			</a><!-- /.brand -->
+			
+		</div><!-- /.navbar-header -->
+		<div class="navbar-header pull-right" role="navigation">
+		</div>
+		</div>
+		</div>
 
-	<h2>AngularJS Sample Application</h2>
+      <p><h2>AngularJS Sample Application</h2></p>
       <div ng-app = "mainApp" ng-controller = "studentController">
          
-         <form name = "studentForm" novalidate>
+         <form name ="studentForm" novalidate>
             <table border = "0">
                <tr>
                   <td>Enter first name:</td>
@@ -76,15 +98,14 @@
          
          mainApp.controller('studentController', function($scope) {
             $scope.reset = function(){
-               $scope.firstName = "Mahesh";
-               $scope.lastName = "Parashar";
-               $scope.email = "MaheshParashar@tutorialspoint.com";
+               $scope.firstName = "";
+               $scope.lastName = "";
+               $scope.email = "";
             }
             
             $scope.reset();
          });
-      </script>		
-	<script type="text/javascript" src="js/angular.min.js"></script>
-	<script type="text/javascript" src="app/app.js"></script>
-    </body>
+      </script>
+      
+   </body>
 </html>
