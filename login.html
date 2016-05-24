@@ -1,0 +1,45 @@
+<html ng-app="myApp">
+    <head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/taskman.css"/>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700" rel="stylesheet" type="text/css">
+
+    </head>
+    <body ng-controller="tasksController">
+    
+    <div class="navbar navbar-default" id="navbar">
+    <div class="container" id="navbar-ontainer">
+	<div class="navbar-header">
+		<a href="#" class="navbar-brand">
+			<small>
+				<i class="glyphicon glyphicon glyphicon-log-out"></i>
+				Try Angular by DWH CMS Team
+			</small>
+		</a><!-- /.brand -->
+		
+	</div><!-- /.navbar-header -->
+	<div class="navbar-header pull-right" role="navigation">
+	</div>
+	</div>
+	</div>
+	<div class="row">
+    	<div class="container">
+    		<blockquote><h1><a href="http://localhost/angularcode_task/">Task Manager Admin Panel</a></h1></blockquote>
+    		<div class="col-sm-9">
+    			<form>
+					<p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
+					<p>Password : <input type="password" ng-model="password" placeholder="Enter your password here"></p>
+					<h1>{{name}} {{password}}</h1>
+					<div class="input-group-btn">
+					<button class="btn btn-default" type="submit" ng-click="login(name)"><i class="glyphicon glyphicon-lock"></i>&nbsp;Login</button>
+					</div>
+    			</form>
+    		</div>
+    	
+    	</div>
+    </div>
+    	
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="app/app.js"></script>
+    </body>
+</html>
