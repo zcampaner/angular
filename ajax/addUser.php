@@ -1,6 +1,6 @@
 <?php 
 require_once '../includes/db.php'; // The mysql database connection script
-if(isset($_GET['username'])){
+if(isset($_GET['username']) && isset($_GET['password'])){
 $username = $_GET['username'];
 $password = $_GET['password'];
 // $status = "0";

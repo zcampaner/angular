@@ -12,6 +12,7 @@ app.controller('usersController', function($scope, $http) {
     $http.post("ajax/addUser.php?username="+username+password).success(function(data){
         getUser();
         $scope.userInput = "";
+        $scope.passInput = "";
       });
   };
 
