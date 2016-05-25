@@ -8,11 +8,10 @@ app.controller('usersController', function($scope, $http) {
         $scope.users = data;
        });
   };
-  $scope.addUser = function (username,password) {
-    $http.post("ajax/addUser.php?username="+username+password).success(function(data){
+  $scope.addUser = function (username) {
+    $http.post("ajax/addUser.php?username="+username).success(function(data){
         getUser();
         $scope.userInput = "";
-        $scope.passInput = "";
       });
   };
 
