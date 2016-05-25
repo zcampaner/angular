@@ -45,7 +45,7 @@
 		</div>
 		</div>
 
-      <p><h2>AngularJS Sample Application</h2></p>
+      <p><h2>AngularJS Sample Registration Application</h2></p>
       <div ng-app ="mainApp" ng-controller = "studentController">
          
          <form ng-submit="submit()" name ="studentForm" novalidate>
@@ -76,6 +76,11 @@
                      </span>
                   </td>
                </tr>
+
+               <tr>
+                  <td>Remember Me: </td><td><input type="checkbox" ng-model="isChecked" required>
+                  </td>
+                </tr>
                
                <tr>
                   <td>

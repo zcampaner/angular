@@ -27,13 +27,10 @@
 </div>
 </div>
 </form>
+
 <div class="task">
 	<label class="checkbox" ng-repeat="task in tasks | filter : filterTask">
-    <input 
-	type="checkbox"
-	value="{{task.STATUS}}"
-	ng-checked="task.STATUS==2"
-	ng-click="toggleStatus(task.ID,task.STATUS, task.TASK)"/> 
+    <input type="checkbox" value="{{task.STATUS}}" ng-checked="task.STATUS==2" ng-click="toggleStatus(task.ID,task.STATUS, task.TASK)"/> 
 	<span ng-class="{strike:task.STATUS==2}">{{task.TASK}} [{{task.ID}}]</span>
 	<a ng-click="deleteTask(task.ID)" class="pull-right"><i class="glyphicon glyphicon-trash"></i></a>
     </label>
